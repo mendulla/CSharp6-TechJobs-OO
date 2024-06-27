@@ -3,7 +3,7 @@ namespace TechJobsOOAutoGraded6
 {
 	public class Job
 	{
-        /*
+        
 
             public int Id { get; }
             private static int nextId = 1;
@@ -21,7 +21,7 @@ namespace TechJobsOOAutoGraded6
                 //Until you create this method, you will not be able to print a job to the console.
 
 
-        */
+        
     }
 }
 
