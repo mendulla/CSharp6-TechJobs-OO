@@ -1,38 +1,15 @@
 ﻿using System;
+
 namespace TechJobsOOAutoGraded6
 {
-	public class Employer
-	{
-        public int Id { get; }
-        private static int nextId = 1;
-        public string Value { get; set; }
-
-        public Employer()
+    // Inherits from JobField to use its common properties and methods
+    public class Employer : JobField
+    {
+        // Constructor that accepts a 'value' parameter and passes it to the base class constructor
+        public Employer(string value) : base(value)
         {
-            Id = nextId;
-            nextId++;
         }
 
-        public Employer(string value) : this()
-        {
-            Value = value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return obj is Employer employer &&
-                   Id == employer.Id;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
-        public override string ToString()
-        {
-            return Value;
-        }
+        // All common properties and methods are inherited from JobField
     }
 }
-
