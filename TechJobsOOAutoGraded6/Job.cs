@@ -54,11 +54,11 @@ namespace TechJobsOOAutoGraded6
             // Construct the job information string
             return nl +
                    "ID: " + Id + nl +
-                   "Name: " + (Name ?? "Data not available") + nl +
-                   "Employer: " + (EmployerName?.Value ?? "Data not available") + nl +
-                   "Location: " + (EmployerLocation?.Value ?? "Data not available") + nl +
-                   "Position Type: " + (JobType?.Value ?? "Data not available") + nl +
-                   "Core Competency: " + (JobCoreCompetency?.Value ?? "Data not available") + nl;
+                   "Name: " + (!string.IsNullOrEmpty(Name) ? Name : "Data not available") + nl +
+                   "Employer: " + (EmployerName != null && !string.IsNullOrEmpty(EmployerName.Value) ? EmployerName.Value : "Data not available") + nl +
+                   "Location: " + (EmployerLocation != null && !string.IsNullOrEmpty(EmployerLocation.Value) ? EmployerLocation.Value : "Data not available") + nl +
+                   "Position Type: " + (JobType != null && !string.IsNullOrEmpty(JobType.Value) ? JobType.Value : "Data not available") + nl +
+                   "Core Competency: " + (JobCoreCompetency != null && !string.IsNullOrEmpty(JobCoreCompetency.Value) ? JobCoreCompetency.Value : "Data not available") + nl;
         }
     }
 }
